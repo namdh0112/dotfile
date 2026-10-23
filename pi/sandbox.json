@@ -1,0 +1,42 @@
+{
+  "enabled": true,
+  "sandboxUserShell": false,
+  "permissionPromptTimeoutSeconds": 0,
+  "network": {
+      "disabled": true,
+      "allowedDomains": ["localhost", "127.0.0.1"],
+      "deniedDomains": []
+
+  },
+  "filesystem": {
+    // For READS:
+    // - ANY read is prompted unless the path is in allowRead or allowWrite
+    // - Granting a prompt adds to allowRead, which overrides denyRead
+    // - denyRead is not a hard-block; it just marks regions as denied by default
+    // For WRITES:
+    // - allowWrite also grants read access to the same paths
+    // - empty ALLOW means no write access at all
+    // - DENY takes precedence and is never prompted
+    "allowRead": [
+      "."
+    ],
+    "allowWrite": [
+      ".",
+      "/tmp"
+    ],
+    "denyRead": [
+      ".env",
+      ".env.*",
+      "*.pem",
+      "*.key",
+      ".git"
+    ],
+    "denyWrite": [
+      ".env",
+      ".env.*",
+      "*.pem",
+      "*.key",
+      ".git"
+    ]
+  }
+}
