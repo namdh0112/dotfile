@@ -1,0 +1,18 @@
+{
+  "lastChangelogVersion": "1.4.0",
+  "compaction": {
+    "enabled": false
+  },
+  "outputPad": 1,
+  "editorPaddingX": 1,
+  "quietStartup": true,
+  "theme": "system",
+  "defaultProvider": "openrouter",
+  "packages": [
+    "npm:pi-openrouter-native",
+    "npm:pi-sandbox"
+  ],
+  "defaultModel": "z-ai/glm-5.3-flash",
+  "hideThinkingBlock": true,
+  "defaultThinkingLevel": "minimal"
+}
