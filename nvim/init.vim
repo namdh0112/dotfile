@@ -17,7 +17,6 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function() vim.opt_local.statusline = " " end,
 })
 EOF
-inoremap jj <ESC>
 colorscheme onedark
 syntax on
 set number
@@ -30,4 +29,7 @@ set expandtab
 set smarttab
 set nofixeol
 set autoread
+let mapleader = " "
+inoremap jj <ESC>
+nnoremap <leader>t :NvimTreeFocus<CR>
 "Use to show installed language :lua print(vim.inspect(require('nvim-treesitter').get_installed()))
