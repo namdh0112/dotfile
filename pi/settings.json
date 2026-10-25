@@ -10,9 +10,10 @@
   "defaultProvider": "openrouter",
   "packages": [
     "npm:pi-openrouter-native",
-    "npm:pi-sandbox"
+    "npm:pi-sandbox",
+    "npm:pi-compact-tools"
   ],
   "defaultModel": "z-ai/glm-5.3-flash",
   "hideThinkingBlock": true,
-  "defaultThinkingLevel": "minimal"
+  "defaultThinkingLevel": "medium"
 }
